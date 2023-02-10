@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/reset.css">
+    </head>
+
+    <body>
+        <header class="cabecalho">
+            <img src="img/logo_branca (2).png" alt="logotipo" class="logo">
+            <h1 class="tituloCabecalho">Teste Imc</h1>
+        </header>
+
+        <main class="principal">
+            <section class="form">
+                <h2 id="tituloForm" class="tituloPrincipal">Insira seus dados</h2>
+                <form id="formulario">
+                    <article class="conteudoForm">
+                        <div class="grupo">
+                            <label for="nome">Nome:</label>
+                            <input type="text" id="nome" name="nome" class="campoNome" placeholder="Digite seu nome aqui">
+                        </div>
+                        <div class="grupo">
+                            <label for="peso">Peso:</label>
+                            <input type="text" id="peso" name="peso" class="campoPeso" placeholder="Digite seu peso aqui">
+                        </div>
+                        <div class="grupo">
+                            <label for="altura">Altura:</label>
+                            <input type="text" id="altura" name="altura" class="campoAltura" placeholder="Digite sua altura aqui">
+                        </div>
+                    </article>
+                    <button id="adicionar-paciente" class="enviar">enviar</button>
+                </form>
+            </section>
+
+            <section class="tabelaPaciente">
+                <h2 class="tituloPrincipal">Seu Resultado</h2>
+                <table>
+                    <thead>
+						<tr>
+							<th>Nome</th>
+							<th>Peso(kg)</th>
+							<th>Altura(m)</th>
+							<th>IMC</th>
+						</tr>
+					</thead>
+
+                    <tbody id="pacientesRegistrados">
+                        <tr class="paciente">
+                            <td class="info-nome">matheus</td>
+                            <td class="info-peso">85</td>
+                            <td class="info-altura">1.75</td>
+                            <td class="info-imc">0</td>                    
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+
+        <footer class="rodape">
+            <img src="img/logo_branca (2).png" alt="logotipo" class="logo">
+            <p class="copyright">&copy; copyright teste imc - 2023</p>
+        </footer>
+
+        <script src="js/validaInfo.js"></script>
+        <script src="js/resgataInfo.js"></script>
+    </body>
+</html>

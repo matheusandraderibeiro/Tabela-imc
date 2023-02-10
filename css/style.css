@@ -1,0 +1,132 @@
+body {
+    font-family: "roboto", sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 8px 25px;
+    background-color: #002800;
+}
+    .logo {
+        width: 120px;
+    }
+
+    .tituloCabecalho {
+        font-size: 40px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+    }
+
+
+.principal {
+    padding: 5px;
+}
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 60px;
+        background-color: #bbcab4;
+    }
+        .tituloPrincipal {
+            display: flex;
+            justify-content: center;
+            width: 90%;
+            margin: 8px auto;
+            font-size: 50px;
+            border-bottom: 1px solid #e8ede6;
+        }
+
+        .conteudoForm {
+            display: flex;
+            justify-content: space-around;
+            padding: 8px;
+        }
+            .grupo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 33%;
+            }
+                .grupo label {
+                    margin-right: 5px;
+                    font-size: 20px;
+                }
+
+                .grupo input {
+                    width: 230px;
+                    height: 30px;
+                    padding: 8px;
+                    border-radius: 5px;
+                    border: solid #767b74 1px
+                }
+
+        .enviar {
+            width: 100px;
+            height: 30px;
+            margin: 20px 8px 8px 15px;
+            border-radius: 5px;
+            font-size: 15px;
+            transition: .6s;
+            border: none;
+            color: #ffffff;
+            background-color: #507643;
+        }
+            .enviar:hover {
+                transform: scale(1.09);
+            }
+
+    .tabelaPaciente {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+        background-color: #325727;
+    }
+        table {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #ffffff;
+        }
+            td, th {
+                padding: 8px;
+                border: 1px solid #001600;
+                text-align: center;
+            }
+
+            td {
+                color: #000000;
+            }
+
+            th {
+                font-weight: bold;
+                background-color: #637a59;
+                color: #062700;
+            }
+
+.rodape {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #002800;
+}
+
+.copyright {
+    margin-top: 3px;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+.paciente-Invalido {
+    background-color: #ff3a26;
+}
