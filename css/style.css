@@ -3,7 +3,6 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 .cabecalho {
@@ -33,7 +32,7 @@ body {
         display: flex;
         flex-direction: column;
         gap: 16px;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         background-color: #bbcab4;
     }
         .tituloPrincipal {
@@ -131,3 +130,18 @@ body {
 .paciente-Invalido {
     background-color: #ff3a26;
 }
+
+.campoErro {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+    .erroMensagem {
+        display: inline-block;
+        margin: 0px 20px 8px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: red;
+    }

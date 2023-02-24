@@ -6,10 +6,19 @@ botao.addEventListener ("click", function (event) {
     const form = document.querySelector ("#formulario");
     const paciente = guardaInformacoesDoPaciente (form);
     const pacienteTr = montaTr (paciente);
-    const tabela = document.querySelector ("#pacientesRegistrados");
+    const erros = validaPaciente (paciente);
 
+    if (erros.length > 0) {
+        mensagensDeErro (erros);
+        return;
+    }
+
+    const tabela = document.querySelector ("#pacientesRegistrados");
     tabela.appendChild (pacienteTr);
     
+    const limpaUlAposValidarMensagem = document.querySelector ("#mensagemErro");
+    limpaUlAposValidarMensagem.innerHTML = "";
+
     form.reset();
 })      
 
@@ -40,4 +49,27 @@ function criaTd (dado, classe) {
     td.textContent = (dado);
     td.classList.add = (classe);
     return td;
+}
+
+function validaPaciente (paciente) {
+    const erros = [];
+
+    if (paciente.nome.length == 0) {erros.push ("campo nome vazio")}
+    if (!pesoValido(paciente.peso)) {erros.push ("peso invalido")}
+    if (paciente.peso.length == 0) {erros.push ("campo peso vazio")}
+    if (!pesoValido(paciente.altura)) {erros.push ("altura invalida")}
+    if (paciente.altura.length == 0) {erros.push ("campo altura vazio")}
+
+    return erros;
+}
+
+function mensagensDeErro (erros) {
+    const ul = document.querySelector ("#mensagemErro");
+    ul.innerHTML = "";
+    erros.forEach (function (erro){
+        var li = document.createElement ("li");
+        li.classList.add ("erroMensagem")
+        li.textContent = erro;
+        ul.appendChild (li);
+    })
 }
