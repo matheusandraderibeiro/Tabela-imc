@@ -1,4 +1,4 @@
-var botao = document.querySelector ("#adicionar-paciente");
+/*var botao = document.querySelector ("#adicionar-paciente");
 
 botao.addEventListener ("click", function (event) {
     event.preventDefault ();
@@ -40,4 +40,4 @@ function montaTd (dado,classe) {
     td.textContent = dado;
     td.classList.add = (classe);
     return td;
-}
+}*/
