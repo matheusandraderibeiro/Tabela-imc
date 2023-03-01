@@ -135,21 +135,55 @@ body {
                 background-color: #637a59;
                 color: #062700;
             }
+    .import-error {
+        display: flex;
+        align-items: center;
+        width: 1300px;
+    }
+        .btnImport {
+            width: 38%;
+        }
+            .import {
+                align-self: flex-start;
+                width: 100px;
+                height: 30px;
+                margin: 20px 8px 8px 15px;
+                border-radius: 5px;
+                font-size: 15px;
+                transition: .6s;
+                border: none;
+                color: #000000;
+                background-color: #dee5da;
+            }
+                .import:hover {
+                    transform: scale(1.09);
+                }
+        .msgImport {
+            padding-top: 15px;
+        }        
+            .msgError {
 
-.rodape {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background-color: #002800;
-}
+                font-size: 20px;
+                font-weight: bold;
+                color: white;
+            }   
 
-.copyright {
-    margin-top: 3px;
-    font-size: 11px;
-    color: #ffffff;
-}
+    
+
+    .rodape {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5px;
+        background-color: #002800;
+    }
+
+    .copyright {
+        margin-top: 3px;
+        font-size: 11px;
+        color: #ffffff;
+    }
 
 /*------------------------------------------------------------------------------------------------*/
 /* Estilização vinda dos eventos JS */

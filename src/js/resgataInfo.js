@@ -5,7 +5,6 @@ botao.addEventListener ("click", function (event) {
 
     const form = document.querySelector ("#formulario");
     const paciente = guardaInformacoesDoPaciente (form);
-    const pacienteTr = montaTr (paciente);
     const erros = validaPaciente (paciente);
 
     if (erros.length > 0) {
@@ -13,14 +12,19 @@ botao.addEventListener ("click", function (event) {
         return;
     }
 
-    const tabela = document.querySelector ("#pacientesRegistrados");
-    tabela.appendChild (pacienteTr);
+    adicionaPacienteNaTabela (paciente);
     
     const limpaUlAposValidarMensagem = document.querySelector ("#mensagemErro");
     limpaUlAposValidarMensagem.innerHTML = "";
 
     form.reset();
-})      
+}) 
+
+function adicionaPacienteNaTabela (paciente) {
+    const pacienteTr = montaTr (paciente);
+    const tabela = document.querySelector ("#pacientesRegistrados");
+    tabela.appendChild (pacienteTr);
+}
 
 function guardaInformacoesDoPaciente (form) {
     var paciente = {
